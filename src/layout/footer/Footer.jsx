@@ -75,11 +75,6 @@ const Footer = () => {
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             © {currentYear} Zay Space Portfolio. Todos los derechos reservados.
           </p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 hover:text-blue-400 text-sm transition-colors">Términos de Servicio</a>
-            <a href="#" className="text-gray-500 hover:text-blue-400 text-sm transition-colors">Política de Privacidad</a>
-            <a href="#" className="text-gray-500 hover:text-blue-400 text-sm transition-colors">Mapa del Sitio</a>
-          </div>
         </div>
 
       </div>
