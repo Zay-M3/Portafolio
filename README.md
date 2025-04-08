@@ -2,6 +2,9 @@
 
 ¡Bienvenido a mi Portafolio Espacial! Este proyecto es mi ventana al universo digital, donde presento mis habilidades como desarrollador FullStack Junior y mi pasión por la tecnología. Aquí encontrarás una colección de mis proyectos, una mirada a mi trayectoria y una forma de contactarme.
 
+¡Visia mi portafolio aqui!
+https://portafolio-tau-nine-80.vercel.app/
+
 ## ✨ Descripción
 
 Este portafolio no es solo una lista de proyectos; es una experiencia interactiva que refleja mi enfoque creativo y técnico. He diseñado cada sección con un tema espacial, utilizando animaciones, efectos visuales y una navegación intuitiva para ofrecer una experiencia única al usuario.
