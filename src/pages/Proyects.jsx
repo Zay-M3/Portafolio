@@ -22,7 +22,7 @@ const Proyects = () => {
       description: "Esta es una aplicación web donde buscamos agilizar los procesos en el área de mantenimiento de una empresa del sector industrial metalmecánico.",
       tags: ["Django", "APis", "Python", "JavaScript", "HTML", "CSS", "Echarts", "Posgrest"],
       githubUrl: "https://github.com/Zay-M3/MMaintenance",
-      demoUrl: "https://mmaintenance-demo.com"
+      demoUrl: "/not-found",
     },
     {
       title: "ExploraPulmones 3D",
@@ -38,7 +38,7 @@ const Proyects = () => {
       tags: ["React", "Tailwind CSS", "Vite"],
       img: ImgPortafolio,
       githubUrl: "https://github.com/Zay-M3/Portafolio",
-      demoUrl: "https://tudominio.com"
+      demoUrl: "https://portafolio-tau-nine-80.vercel.app/"
     }
   ];
 

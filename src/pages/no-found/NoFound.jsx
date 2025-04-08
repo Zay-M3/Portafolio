@@ -65,7 +65,7 @@ const NoFound = () => {
             
             {/* Cohete animado */}
             <button 
-              onClick={() => navigate(-1)}
+              onClick={() => navigate('/inicio')}
               className="flex items-center justify-center mx-auto space-x-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full hover:from-purple-700 hover:to-blue-700 transition-all"
             >
               <FaRocket className="animate-bounce" />

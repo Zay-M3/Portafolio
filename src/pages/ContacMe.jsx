@@ -38,7 +38,6 @@ const ContacMe = () => {
       };
 
       await emailjs.send(serviceID, templateID, emailData, publicKey);
-      alert("¡Correo enviado con éxito!");
       reset();
     } catch (error) {
       console.error("Error al enviar el correo:", error);
