@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/home/Home.jsx";
 import NoFound from "./pages/no-found/NoFound.jsx";
@@ -15,11 +15,11 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inicio" element={<Home />} />
-        <Route path="*" element={<NoFound />} />
         <Route path="/proyectos" element={<Proyects />} />
         <Route path="/galaxias" element={<Galaxy />} />
         <Route path="/sobre-mi" element={<AboutMe />} />
         <Route path="/contacto" element={<ContacMe />} />
+        <Route path="*" element={<NoFound />} />
       </Routes>
     </Layout>
   </BrowserRouter>
