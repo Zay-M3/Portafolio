@@ -21,7 +21,7 @@ const Proyects = () => {
       title: "MMaintenance",
       description: "Esta es una aplicación web donde buscamos agilizar los procesos en el área de mantenimiento de una empresa del sector industrial metalmecánico.",
       tags: ["Django", "APis", "Python", "JavaScript", "HTML", "CSS", "Echarts", "Posgrest"],
-      githubUrl: "https://github.com/Zay-M3/MMaintenance",
+      githubUrl: "#",
       demoUrl: "/not-found",
     },
     {
