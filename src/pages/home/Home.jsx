@@ -47,8 +47,10 @@ const Home = () => {
             <div className="relative group animate-float">
               <div className="w-48 h-48 rounded-full border-4 border-blue-500 overflow-hidden relative z-10 shadow-[0_0_20px_#3b82f6]">
                 <img
-                  src={IconP}
-                  alt="Tu nombre"
+                   src="https://avatars.githubusercontent.com/u/181848019?v=4"
+                   width="120"
+                   style={{ borderRadius: "50%" }}
+                   alt="Oscar Estrada"
                   className="w-full h-full object-cover hover:filter hover:sepia-20 hover:hue-rotate-180 transition-all duration-500"
                 />
               </div>
