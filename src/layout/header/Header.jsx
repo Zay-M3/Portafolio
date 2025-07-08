@@ -68,7 +68,7 @@ const Header = () => {
     <nav className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 border-b border-gray-800 backdrop-blur-sm ${
       isScrolled 
         ? 'py-3 px-6 bg-[rgba(17,17,17,0.1)]' 
-        : 'py-6 px-8 bg-[rgba(17,17,17,1)]'
+        : 'py-6 px-8 bg-[#130b29cc]'
     }`}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center space-x-3 mb-4 md:mb-0">

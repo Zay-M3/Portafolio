@@ -5,9 +5,34 @@ import IconP from "./../../assets/icon.jpg"; // Asegúrate de que la ruta sea co
 import Stars from "../../componets/Stars"; // Import the new component
 import { useNavigate } from "react-router";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  // Datos de las estadísticas
+  const stats = [
+    {
+      icon: <FaCode className="animate-pulse" />,
+      number: "3+",
+      label: "Proyectos"
+    },
+    {
+      icon: <IoMdPlanet className="animate-pulse" />,
+      number: "1",
+      label: "Años experiencia"
+    },
+    {
+      icon: <GiGalaxy className="animate-pulse" />,
+      number: "∞",
+      label: "Ideas"
+    },
+    {
+      icon: <FaGlobeAmericas className="animate-pulse" />,
+      number: "5K+",
+      label: "Líneas de código"
+    }
+  ];
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       <Stars numStars={100} />
@@ -65,27 +90,40 @@ const Home = () => {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <StatCard
-              icon={<FaCode className="animate-pulse " />}
-              number="3+"
-              label="Proyectos"
-            />
-            <StatCard
-              icon={<IoMdPlanet className="animate-pulse " />}
-              number="1"
-              label="Años experiencia"
-            />
-            <StatCard
-              icon={<GiGalaxy className="animate-pulse " />}
-              number="∞"
-              label="Ideas"
-            />
-            <StatCard
-              icon={<FaGlobeAmericas className="animate-pulse " />}
-              number="5K+"
-              label="Líneas de código"
-            />
+          {/* Carrusel infinito de estadísticas */}
+          <div className="mb-12 overflow-hidden relative py-4">
+            <div className="flex animate-scroll">
+              {/* Primer set de estadísticas */}
+              {stats.map((stat, index) => (
+                <div key={`first-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
+                  <StatCard
+                    icon={stat.icon}
+                    number={stat.number}
+                    label={stat.label}
+                  />
+                </div>
+              ))}
+              {/* Segundo set para continuidad infinita */}
+              {stats.map((stat, index) => (
+                <div key={`second-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
+                  <StatCard
+                    icon={stat.icon}
+                    number={stat.number}
+                    label={stat.label}
+                  />
+                </div>
+              ))}
+              {/* Tercer set para asegurar continuidad */}
+              {stats.map((stat, index) => (
+                <div key={`third-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
+                  <StatCard
+                    icon={stat.icon}
+                    number={stat.number}
+                    label={stat.label}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <button
@@ -102,7 +140,7 @@ const Home = () => {
 };
 
 const StatCard = ({ icon, number, label }) => (
-  <div className="bg-gray-800 bg-opacity-60 backdrop-blur-sm rounded-xl p-4 text-center border border-gray-700">
+  <div className="bg-gray-800 bg-opacity-60 backdrop-blur-sm rounded-xl p-4 text-center border border-gray-700 transform transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20">
     <div className="text-3xl mb-2 text-blue-400">{icon}</div>
     <div className="text-2xl font-bold mb-1">{number}</div>
     <div className="text-gray-400 text-sm">{label}</div>

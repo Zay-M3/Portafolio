@@ -38,3 +38,77 @@ section {
 .project-float {
   animation: projectFloat 6s infinite ease-in-out;
 }
+
+/* Animación del carrusel infinito */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
+}
+
+/* Pausar animación en hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Animaciones para efectos de holograma */
+@keyframes scan {
+  0% { top: 0%; opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes scan-delayed {
+  0% { top: 0%; opacity: 0.6; }
+  50% { opacity: 0.4; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes scan-device {
+  0% { top: -10%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+
+@keyframes float-hologram {
+  0%, 100% { 
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px) scale(0.8);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(10px) translateX(-10px) scale(1.2);
+    opacity: 0.5;
+  }
+  75% { 
+    transform: translateY(-5px) translateX(5px) scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+.animate-scan-delayed {
+  animation: scan-delayed 2.5s linear infinite;
+}
+
+.animate-scan-device {
+  animation: scan-device 3s linear infinite;
+}
+
+.animate-float-hologram {
+  animation: float-hologram 4s ease-in-out infinite;
+}
+
+/* Efecto de resplandor para texto */
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.6));
+}
