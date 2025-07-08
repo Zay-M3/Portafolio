@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { MdWork, MdCode, MdLightbulb, MdCheckCircle, MdBuild } from "react-icons/md";
-import { FaGithub, FaExternalLinkAlt, FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaNodeJs,FaUbuntu  } from "react-icons/fa";
 import { SiDjango, SiTailwindcss, SiNextdotjs, SiGraphql, SiPostgresql, SiVite } from "react-icons/si";
 import Stars from "../componets/Stars";
 import ImgProyectPulmones from "../assets/pulmones_proyect.png";
 import ImgFF from "../assets/ffinance.webp";
 import ImgPortafolio from "../assets/portafolio.png";
+import ImgMMaintenance from "../assets/mmaintenance.png"; // Asegúrate de que la ruta sea correcta
+import { SiMongodb, SiGunicorn, SiFirebase  } from "react-icons/si";
+import { DiNginx } from "react-icons/di";
+import ImgTuRifa from "../assets/turifa.png"; // Asegúrate de que la ruta sea correcta
 
 const Proyects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
@@ -13,38 +17,51 @@ const Proyects = () => {
   const projects = [
     {
       title: "MMaintenance",
-      subtitle: "Sistema de Gestión Industrial",
-      description: "Plataforma integral para optimizar procesos de mantenimiento en empresas del sector metalmecánico, reduciendo tiempos muertos y costos operativos.",
-      img: ImgPortafolio, // Usando imagen temporal
-      githubUrl: "https://github.com/Zay-M3/MMaintenance",
+      subtitle: "Sistema Gestión de Mantenimiento",
+      description: "Plataforma integral para optimizar procesos de mantenimiento en empresas del sector metalmecánico, reduciendo tiempos muertos y costos operativos. Actualmente esta aplicacion se encuentra en producción en la empresa Celco S.A.S, continuando su desarrollo y mejora continua. \n El codigo no se encuentra de momento disponible, ya que es un proyecto empresarial en produccion.",
+      img: ImgMMaintenance, 
+      
       demoUrl: "#",
       importance: "🏭 Solución empresarial que impacta la productividad industrial",
       process: [
-        "Análisis de procesos industriales actuales",
+        "Análisis del proceso de mantenimiento industrial actual",
         "Diseño de base de datos para gestión de equipos",
-        "Desarrollo de APIs REST para integración",
+        "Desarrollo de la API rest para el control de activos, reportes, y mantenimiento",
         "Implementación de dashboard administrativo",
-        "Sistema de notificaciones y alertas automatizadas"
+        "Sistema de creación de activos y mantenimiento",
+        "Gestion automatica para mantenimientos preventivos",
+        "Generar hojas de vida por activo, mas registro de mantenimientos",
+        "Sistema de notificaciones y alertas automatizadas",
+        "Filtros en tablas y mas busqueda indexada para una mejor experiencia",
       ],
       learned: [
         "Gestión de proyectos empresariales complejos",
         "Integración con sistemas industriales existentes",
         "Análisis de datos para optimización de procesos",
         "Desarrollo de soluciones escalables para empresas",
-        "Metodologías ágiles en desarrollo de software"
+        "Metodologías ágiles en desarrollo de software",
+        "Arquitectura de software robusta",
+        "Tecnologías de bases de datos avanzadas",
+        "Programación orientada a objetos y diseño de APIs RESTful"
       ],
       achieved: [
-        "Reducción del 60% en tiempos de mantenimiento",
+        "Reducción del 80% de tiempo en digitalización de procesos",
+        "Sistema de piezas por Activo para control de fallas",
+        "Generacion de informes mensuales con metricas como MTTR y MTBF",
         "Sistema de alertas preventivas implementado",
-        "Integración exitosa con ERP existente",
+        "Integración exitosa en una VM de Celco S.A.S",
         "Dashboard en tiempo real para supervisores",
-        "ROI positivo en menos de 6 meses"
+        "Produccion con usuarios reales y feedback positivo",
+        "Accesible desde cualquier dispositivo (Mobil, Table, Desktop)"
       ],
       solved: [
-        "Mantenimientos reactivos costosos",
+        "Mantenimientos tardados costosos",
         "Falta de trazabilidad en procesos",
         "Pérdida de tiempo en documentación manual",
-        "Dificultad para predecir fallas de equipos"
+        "Dificultad para predecir fallas de equipos",
+        "Dificultad para gestionar inventarios de piezas",
+        "Dificultad para generar informes de mantenimiento",
+        "Perder de tiempo en procesos manuales"
       ],
       technologies: [
         { name: "Django", icon: <SiDjango className="text-green-600" />, category: "Backend" },
@@ -52,26 +69,29 @@ const Proyects = () => {
         { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" />, category: "Database" },
         { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, category: "Frontend" },
         { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, category: "Markup" },
-        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Styling" }
+        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Styling" },
+        { name: "Gunicorn", icon: <SiGunicorn className="text-green-500" />, category: "Server" },
+        { name: "Nginx", icon: <DiNginx className="text-gray-500" />, category: "Server" },
+        { name: "Ubuntu", icon: <FaUbuntu className="text-orange-500" />, category: "OS" }
       ]
     },
     {
       title: "FFinance",
       subtitle: "Plataforma de Herramientas Financieras",
-      description: "Una plataforma web completa diseñada para democratizar el acceso a herramientas financieras para nuevos inversores en el mercado de valores estadounidense.",
+      description: "Una plataforma web completa diseñada para democratizar el acceso a herramientas financieras para nuevos inversores en el mercado de valores estadounidense. Este es un proyecto personal que busca facilitar el análisis y la toma de decisiones financieras mediante visualizaciones interactivas y datos en tiempo real, usando la API de Yfinance para obtener información actualizada.",
       img: ImgFF,
       githubUrl: "https://github.com/Zay-M3/FFinance",
       demoUrl: "https://ffinance-production.up.railway.app/",
       importance: "🏆 Proyecto destacado por su impacto social y complejidad técnica",
       process: [
         "Investigación del mercado financiero y necesidades de usuarios novatos",
-        "Diseño de arquitectura escalable con Django y PostgreSQL",
-        "Implementación de APIs para datos financieros en tiempo real",
+        "Diseño de arquitectura escalable con Django",
+        "Implementación de APIs (Yfinance) para datos financieros en tiempo real",
         "Desarrollo de dashboards interactivos con ECharts",
         "Testing exhaustivo y optimización de rendimiento"
       ],
       learned: [
-        "Integración de APIs financieras complejas",
+        "Integración de APIs financieras gratis de Yfinance",
         "Manejo de grandes volúmenes de datos en tiempo real",
         "Arquitectura de software escalable",
         "Seguridad en aplicaciones financieras",
@@ -82,7 +102,6 @@ const Proyects = () => {
         "Reducción del 80% en tiempo de análisis financiero",
         "Interfaz intuitiva para usuarios sin experiencia",
         "Sistema de alertas automáticas",
-        "Arquitectura preparada para 10K+ usuarios"
       ],
       solved: [
         "Barrera de entrada al mercado financiero",
@@ -94,7 +113,6 @@ const Proyects = () => {
         { name: "Django", icon: <SiDjango className="text-green-600" />, category: "Backend" },
         { name: "Python", icon: <FaPython className="text-blue-500" />, category: "Language" },
         { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, category: "Frontend" },
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" />, category: "Database" },
         { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, category: "Markup" },
         { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Styling" }
       ]
@@ -102,23 +120,29 @@ const Proyects = () => {
     {
       title: "ExploraPulmones 3D",
       subtitle: "Aplicación Educativa Interactiva",
-      description: "Una innovadora aplicación web que revoluciona el aprendizaje de anatomía pulmonar mediante modelos 3D interactivos y realidad aumentada.",
+      description: "Una innovadora aplicación web que revoluciona el aprendizaje de anatomía pulmonar mediante modelos 3D interactivos y realidad aumentada.Integrando tecnologías avanzadas como Three.js y Next.js, esta plataforma permite a estudiantes y profesionales explorar las estructuras pulmonares de manera intuitiva y accesible desde cualquier dispositivo, incluyendo un minijuego interactivo para reforzar el aprendizaje.",
       img: ImgProyectPulmones,
       githubUrl: "https://github.com/DavidGarzonDev/proyecto-web-3d",
       demoUrl: "https://proyecto-web-3d.vercel.app/",
       importance: "🎓 Innovación en educación médica con tecnología 3D",
       process: [
-        "Colaboración con profesionales médicos para validar contenido",
         "Modelado 3D detallado de estructuras pulmonares",
-        "Desarrollo con Next.js y Three.js para renderizado 3D",
+        "Trabajo con Jira para gestión de tareas",
+        "Gestion de versiones con Git",
+        "Desarrollo por etapas con feedback constante",
+        "Trabajo en equipo con otros desarrolladores",
+        "Desarrollo con React y Three.js para renderizado 3D",
         "Implementación de interacciones táctiles y de mouse",
         "Optimización para diferentes dispositivos y navegadores"
       ],
       learned: [
         "Desarrollo de aplicaciones 3D con Three.js",
+        "Optimización de modelos 3D para web",
         "Optimización de rendimiento para gráficos complejos",
         "Diseño de experiencias educativas interactivas",
-        "Colaboración interdisciplinaria con expertos médicos",
+        "Optimización de texturas para la web",
+        "Uso de herrmientas como Blender para modelado 3D",
+        "Uso de WebGL para renderizado eficiente",
         "Accesibilidad en aplicaciones 3D"
       ],
       achieved: [
@@ -135,55 +159,63 @@ const Proyects = () => {
         "Limitaciones de aprendizaje remoto"
       ],
       technologies: [
-        { name: "Next.js", icon: <SiNextdotjs className="text-black" />, category: "Framework" },
         { name: "React", icon: <FaReact className="text-blue-400" />, category: "Frontend" },
         { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-500" />, category: "Styling" },
-        { name: "GraphQL", icon: <SiGraphql className="text-pink-500" />, category: "API" },
-        { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, category: "Language" }
+        { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, category: "Language" },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, category: "Database" },
       ]
     },
     {
-      title: "MMaintenance",
-      subtitle: "Sistema de Gestión Industrial",
-      description: "Plataforma integral para optimizar procesos de mantenimiento en empresas del sector metalmecánico, reduciendo tiempos muertos y costos operativos.",
-      img: ImgPortafolio, // Usando imagen temporal
-      githubUrl: "https://github.com/Zay-M3/MMaintenance",
-      demoUrl: "#",
-      importance: "🏭 Solución empresarial que impacta la productividad industrial",
+      title: "TuRifa",
+      subtitle: "Sistema para Gestión de Rifas",
+      description: "Plataforma web para la gestión de rifas, permitiendo a los usuarios crear, administrar y participar en rifas de manera sencilla y segura. Con un enfoque en la experiencia del usuario, esta aplicación utiliza tecnologías modernas para ofrecer una interfaz intuitiva y funcionalidades avanzadas.",
+      img: ImgTuRifa, // Usando imagen temporal
+      githubUrl: "https://github.com/DavidGarzonDev/TuRifa",
+      demoUrl: "https://tu-rifa-h6e6.vercel.app/",
+      importance: "🎟️ Innovación en la gestión de rifas con tecnología web",
       process: [
-        "Análisis de procesos industriales actuales",
-        "Diseño de base de datos para gestión de equipos",
-        "Desarrollo de APIs REST para integración",
-        "Implementación de dashboard administrativo",
-        "Sistema de notificaciones y alertas automatizadas"
+        "Análisis de mercado y necesidades de usuarios",
+        "Diseño de arquitectura escalable con React y Node.js",
+        "Implementación de APIs REST para gestión de rifas",
+        "Desarrollo de dashboard administrativo",
+        "Implementación de sistema de notificaciones",
+        "Integración de pagos seguros",
+        "Testing y optimización de rendimiento",
+        "Despliegue en Vercel para alta disponibilidad"
       ],
       learned: [
-        "Gestión de proyectos empresariales complejos",
-        "Integración con sistemas industriales existentes",
-        "Análisis de datos para optimización de procesos",
-        "Desarrollo de soluciones escalables para empresas",
-        "Metodologías ágiles en desarrollo de software"
+        "Gestión de proyectos ágiles",
+        "Desarrollo de aplicaciones web escalables",
+        "Integración de sistemas de pago seguros",
+        "Optimización de rendimiento en aplicaciones web",
+        "Integracion de parcela de pagos",
+        "Uso de GitProyect",
+        "Implementación de seguridad en aplicaciones web"
+
       ],
       achieved: [
-        "Reducción del 60% en tiempos de mantenimiento",
-        "Sistema de alertas preventivas implementado",
-        "Integración exitosa con ERP existente",
-        "Dashboard en tiempo real para supervisores",
-        "ROI positivo en menos de 6 meses"
+        "Integración exitosa de pagos con Stripe",
+        "Interfaz de usuario intuitiva y responsiva",
+        "Sistema de gestión de rifas funcional",
+        "Reducción del 80% en tiempo de gestión de rifas",
+
       ],
       solved: [
-        "Mantenimientos reactivos costosos",
-        "Falta de trazabilidad en procesos",
-        "Pérdida de tiempo en documentación manual",
-        "Dificultad para predecir fallas de equipos"
+        "Barrera de entrada para la creación de rifas",
+        "Falta de transparencia en rifas tradicionales",
+        "Dificultad para gestionar rifas de manera eficiente",
+        "Necesidad de un sistema seguro y confiable para rifas",
+        "Falta de herramientas para la promoción de rifas",
+        "Dificultad para realizar pagos seguros en rifas",
       ],
       technologies: [
-        { name: "Django", icon: <SiDjango className="text-green-600" />, category: "Backend" },
-        { name: "Python", icon: <FaPython className="text-blue-500" />, category: "Language" },
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" />, category: "Database" },
+        { name: "React", icon: <FaReact className="text-blue-400" />, category: "Frontend" },
+        { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-500" />, category: "Styling" },
+        { name: "Express", icon: <FaNodeJs className="text-green-600" />, category: "Backend" },
         { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, category: "Frontend" },
         { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, category: "Markup" },
-        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Styling" }
+        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Styling" },
+        { name: "Firebase", icon: <SiFirebase className="text-yellow-500" />, category: "Database" },
       ]
     }
   ];
