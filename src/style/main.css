@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejorar el espaciado de las secciones */
+section {
+  scroll-margin-top: 80px;
+}
 
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -17,3 +26,15 @@
   .animate-twinkle {
     animation: twinkle 2s ease-in-out infinite;
   }
+
+/* Animación para elementos flotantes en proyectos */
+@keyframes projectFloat {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-5px) translateX(5px); }
+  50% { transform: translateY(5px) translateX(-5px); }
+  75% { transform: translateY(-3px) translateX(-3px); }
+}
+
+.project-float {
+  animation: projectFloat 6s infinite ease-in-out;
+}
