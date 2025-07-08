@@ -44,28 +44,7 @@ const AboutMe = () => {
             />
           </div>
 
-          <h3 className="text-xl font-semibold mb-4">Habilidades</h3>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {[
-              "React",
-              "TypeScript",
-              "Three.js",
-              "Django",
-              "Node.js",
-              "GraphQL",
-              "Boostrap",
-              "Python",
-              "JavaScript",
-              "Tailwind CSS",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 bg-gray-800 rounded-full text-sm"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+          
         </section>
       </main>
     </div>

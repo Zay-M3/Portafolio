@@ -260,6 +260,267 @@ const Proyects = () => {
             <DetailedProjectCard project={projects[selectedProject]} /> 
           </div>
         </section>
+
+        {/* Nueva sección de habilidades */}
+        <section className="mt-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 flex items-center justify-center">
+              <MdBuild className="mr-3 text-green-400" /> Habilidades Técnicas
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Tecnologías y herramientas con las que trabajo para crear soluciones innovadoras y eficientes.
+            </p>
+          </div>
+
+          {/* Carrusel de habilidades */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll space-x-8 whitespace-nowrap">
+              {/* Primera copia de las habilidades */}
+              <div className="flex space-x-8 flex-shrink-0">
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-blue-500 flex justify-center">
+                    <FaPython />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Python</h5>
+                </div>
+                
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-600 flex justify-center">
+                    <SiDjango />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Django</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-yellow-500 flex justify-center">
+                    <FaJs />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">JavaScript</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-cyan-400 flex justify-center">
+                    <FaReact />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">React</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-black flex justify-center">
+                    <SiNextdotjs />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Next.js</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-orange-500 flex justify-center">
+                    <FaHtml5 />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">HTML5</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-blue-500 flex justify-center">
+                    <FaCss3Alt />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">CSS3</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-500 flex justify-center">
+                    <FaNodeJs />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Node.js</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-cyan-500 flex justify-center">
+                    <SiTailwindcss />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Tailwind</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-blue-600 flex justify-center">
+                    <SiPostgresql />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">PostgreSQL</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-500 flex justify-center">
+                    <SiMongodb />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">MongoDB</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-purple-500 flex justify-center">
+                    <SiVite />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Vite</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-pink-500 flex justify-center">
+                    <SiGraphql />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">GraphQL</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-500 flex justify-center">
+                    <SiGunicorn />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Gunicorn</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-gray-500 flex justify-center">
+                    <DiNginx />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Nginx</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-orange-500 flex justify-center">
+                    <FaUbuntu />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Ubuntu</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-yellow-500 flex justify-center">
+                    <SiFirebase />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Firebase</h5>
+                </div>
+              </div>
+
+              {/* Segunda copia de las habilidades para el efecto infinito */}
+              <div className="flex space-x-8 flex-shrink-0">
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-blue-500 flex justify-center">
+                    <FaPython />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Python</h5>
+                </div>
+                
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-600 flex justify-center">
+                    <SiDjango />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Django</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-yellow-500 flex justify-center">
+                    <FaJs />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">JavaScript</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-cyan-400 flex justify-center">
+                    <FaReact />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">React</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-black flex justify-center">
+                    <SiNextdotjs />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Next.js</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-orange-500 flex justify-center">
+                    <FaHtml5 />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">HTML5</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-blue-500 flex justify-center">
+                    <FaCss3Alt />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">CSS3</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-500 flex justify-center">
+                    <FaNodeJs />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Node.js</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-cyan-500 flex justify-center">
+                    <SiTailwindcss />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Tailwind</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-blue-600 flex justify-center">
+                    <SiPostgresql />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">PostgreSQL</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-500 flex justify-center">
+                    <SiMongodb />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">MongoDB</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-purple-500 flex justify-center">
+                    <SiVite />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Vite</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-pink-500 flex justify-center">
+                    <SiGraphql />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">GraphQL</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-green-500 flex justify-center">
+                    <SiGunicorn />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Gunicorn</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-gray-500 flex justify-center">
+                    <DiNginx />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Nginx</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-orange-500 flex justify-center">
+                    <FaUbuntu />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Ubuntu</h5>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-700/70 transition-all duration-300 group hover:scale-105 flex-shrink-0">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform text-yellow-500 flex justify-center">
+                    <SiFirebase />
+                  </div>
+                  <h5 className="text-sm font-medium text-white text-center">Firebase</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
