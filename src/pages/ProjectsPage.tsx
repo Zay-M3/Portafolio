@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { MdWork, MdCode, MdLightbulb, MdCheckCircle, MdBuild } from "react-icons/md";
 import { FaGithub, FaExternalLinkAlt, FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaNodeJs,FaUbuntu  } from "react-icons/fa";
 import { SiDjango, SiTailwindcss, SiNextdotjs, SiGraphql, SiPostgresql, SiVite } from "react-icons/si";
-import Stars from "../componets/Stars";
-import ImgProyectPulmones from "../assets/pulmones_proyect.png";
-import ImgFF from "../assets/ffinance.webp";
-import ImgPortafolio from "../assets/portafolio.png";
-import ImgMMaintenance from "../assets/mmaintenance.png"; // Asegúrate de que la ruta sea correcta
+import { Stars } from "@components/ui/Stars";
+import ImgProyectPulmones from "@assets/pulmones_proyect.png";
+import ImgFF from "@assets/ffinance.webp";
+import ImgPortafolio from "@assets/portafolio.png";
+import ImgMMaintenance from "@assets/mmaintenance.png"; // Asegúrate de que la ruta sea correcta
 import { SiMongodb, SiGunicorn, SiFirebase  } from "react-icons/si";
 import { DiNginx } from "react-icons/di";
-import ImgTuRifa from "../assets/turifa.png"; // Asegúrate de que la ruta sea correcta
+import ImgTuRifa from "@assets/turifa.png"; // Asegúrate de que la ruta sea correcta
 
 const Proyects = () => {
   const [selectedProject, setSelectedProject] = useState(0);

@@ -1,5 +1,5 @@
 import React from "react";
-import Stars from "../componets/Stars";
+import { Stars } from "@components/ui/Stars";
 import { FaUserAstronaut } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 

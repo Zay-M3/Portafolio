@@ -1,8 +1,8 @@
 import { FaRocket, FaCode, FaGlobeAmericas } from "react-icons/fa";
 import { GiGalaxy } from "react-icons/gi";
 import { IoMdPlanet } from "react-icons/io";
-import IconP from "./../../assets/icon.jpg"; // Asegúrate de que la ruta sea correcta
-import Stars from "../../componets/Stars"; // Import the new component
+import IconP from "@assets/icon.jpg"; // Asegúrate de que la ruta sea correcta
+import { Stars } from "@components/ui/Stars"; // Import the new component
 import { useNavigate } from "react-router";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useState, useEffect } from "react";
