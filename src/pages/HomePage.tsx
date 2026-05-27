@@ -1,38 +1,26 @@
-import { FaRocket, FaCode, FaGlobeAmericas } from "react-icons/fa";
-import { GiGalaxy } from "react-icons/gi";
-import { IoMdPlanet } from "react-icons/io";
-import IconP from "@assets/icon.jpg"; // Asegúrate de que la ruta sea correcta
-import { Stars } from "@components/ui/Stars"; // Import the new component
-import { useNavigate } from "react-router";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { FaRocket, FaCode, FaGlobeAmericas } from 'react-icons/fa'
+import { GiGalaxy } from 'react-icons/gi'
+import { IoMdPlanet } from 'react-icons/io'
+import { Stars } from '@components/ui/Stars'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
-const Home = () => {
-  const navigate = useNavigate();
+// Re-export sections as components for the landing page
+import { ProjectsSection } from '@components/sections/ProjectsSection'
+import { AboutSection } from '@components/sections/AboutSection'
+import { ContactSection } from '@components/sections/ContactSection'
 
-  // Datos de las estadísticas
+const HomePage = () => {
+  const navigate = useNavigate()
+
   const stats = [
-    {
-      icon: <FaCode className="animate-pulse" />,
-      number: "3+",
-      label: "Proyectos"
-    },
-    {
-      icon: <IoMdPlanet className="animate-pulse" />,
-      number: "1",
-      label: "Años experiencia"
-    },
-    {
-      icon: <GiGalaxy className="animate-pulse" />,
-      number: "∞",
-      label: "Ideas"
-    },
-    {
-      icon: <FaGlobeAmericas className="animate-pulse" />,
-      number: "5K+",
-      label: "Líneas de código"
-    }
-  ];
+    { icon: <FaCode className="animate-pulse" />, number: '3+', label: 'Proyectos' },
+    { icon: <IoMdPlanet className="animate-pulse" />, number: '1', label: 'Años experiencia' },
+    { icon: <GiGalaxy className="animate-pulse" />, number: '∞', label: 'Ideas' },
+    { icon: <FaGlobeAmericas className="animate-pulse" />, number: '5K+', label: 'Líneas de código' },
+  ]
+
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       <Stars numStars={100} />
@@ -41,16 +29,17 @@ const Home = () => {
       <div className="absolute top-1/4 -left-20 w-64 h-64 bg-purple-900 rounded-full filter blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-blue-900 rounded-full filter blur-3xl opacity-20"></div>
 
-      <main className="relative z-10 max-w-6xl mx-auto py-12 px-6">
-        <section className="text-center">
+      {/* Section: Inicio */}
+      <section id="inicio" className="relative z-10 max-w-6xl mx-auto py-12 px-6">
+        <div className="text-center mb-8">
           <div className="flex justify-center mb-8">
             <div className="relative group animate-float">
               <div className="w-48 h-48 rounded-full border-4 border-blue-500 overflow-hidden relative z-10 shadow-[0_0_20px_#3b82f6]">
                 <img
-                   src="https://avatars.githubusercontent.com/u/181848019?v=4"
-                   width="120"
-                   style={{ borderRadius: "50%" }}
-                   alt="Oscar Estrada"
+                  src="https://avatars.githubusercontent.com/u/181848019?v=4"
+                  width="120"
+                  style={{ borderRadius: '50%' }}
+                  alt="Oscar Estrada"
                   className="w-full h-full object-cover hover:filter hover:sepia-20 hover:hue-rotate-180 transition-all duration-500"
                 />
               </div>
@@ -62,91 +51,67 @@ const Home = () => {
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 ">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
             Hola! soy David Estrada
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Desarollador Junior FullStack con pasión por la tecnologia, con un
+            Desarrollador Junior FullStack con pasión por la tecnologia, con un
             enfoque en resolver problemas y crear experiencias únicas en la web.
           </p>
+
           <div className="flex justify-center space-x-4 mb-8">
-            <a
-              href="https://github.com/Zay-M3"
-              target="_blank"
-              className="text-gray-400 hover:text-blue-300 transition-colors"
-            >
+            <a href="https://github.com/Zay-M3" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-300 transition-colors">
               <FaGithub size={30} />
             </a>
-            <a
-              href="https://www.linkedin.com/in/oscar-david-estrada-betancourt-491732331/"
-              target="_blank"
-              className="text-gray-400 hover:text-blue-300 transition-colors"
-            >
+            <a href="https://www.linkedin.com/in/oscar-david-estrada-betancourt-491732331/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-300 transition-colors">
               <FaLinkedin size={30} />
             </a>
-            <a
-              href="mailto:oscardavidestradabetancourth@gmail.com"
-              className="text-gray-400 hover:text-blue-300 transition-colors"
-            >
-              <FaEnvelope size={30}  />
+            <a href="mailto:oscardavidestradabetancourth@gmail.com" className="text-gray-400 hover:text-blue-300 transition-colors">
+              <FaEnvelope size={30} />
             </a>
           </div>
 
           {/* Carrusel infinito de estadísticas */}
           <div className="mb-12 overflow-hidden relative py-4">
             <div className="flex animate-scroll">
-              {/* Primer set de estadísticas */}
-              {stats.map((stat, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
-                  <StatCard
-                    icon={stat.icon}
-                    number={stat.number}
-                    label={stat.label}
-                  />
-                </div>
-              ))}
-              {/* Segundo set para continuidad infinita */}
-              {stats.map((stat, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
-                  <StatCard
-                    icon={stat.icon}
-                    number={stat.number}
-                    label={stat.label}
-                  />
-                </div>
-              ))}
-              {/* Tercer set para asegurar continuidad */}
-              {stats.map((stat, index) => (
-                <div key={`third-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
-                  <StatCard
-                    icon={stat.icon}
-                    number={stat.number}
-                    label={stat.label}
-                  />
+              {[...stats, ...stats, ...stats].map((stat, index) => (
+                <div key={`stat-${index}`} className="flex-shrink-0 px-3 mx-2 w-70">
+                  <div className="bg-gray-800 bg-opacity-60 backdrop-blur-sm rounded-xl p-4 text-center border border-gray-700 transform transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20">
+                    <div className="text-3xl mb-2 text-blue-400">{stat.icon}</div>
+                    <div className="text-2xl font-bold mb-1">{stat.number}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           <button
-            onClick={() => navigate("/galaxias")}
+            onClick={() => navigate('/galaxias')}
             className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all flex items-center mx-auto space-x-2"
           >
             <span>Explorar Galaxias</span>
-            <GiGalaxy className="animate-pulse " />
+            <GiGalaxy className="animate-pulse" />
           </button>
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* Section: Proyectos */}
+      <section id="proyectos">
+        <ProjectsSection />
+      </section>
+
+      {/* Section: Sobre Mí */}
+      <section id="sobre-mi">
+        <AboutSection />
+      </section>
+
+      {/* Section: Contacto */}
+      <section id="contacto">
+        <ContactSection />
+      </section>
     </div>
-  );
-};
+  )
+}
 
-const StatCard = ({ icon, number, label }) => (
-  <div className="bg-gray-800 bg-opacity-60 backdrop-blur-sm rounded-xl p-4 text-center border border-gray-700 transform transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20">
-    <div className="text-3xl mb-2 text-blue-400">{icon}</div>
-    <div className="text-2xl font-bold mb-1">{number}</div>
-    <div className="text-gray-400 text-sm">{label}</div>
-  </div>
-);
-
-export default Home;
+export default HomePage

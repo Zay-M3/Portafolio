@@ -4,10 +4,10 @@ import { GiGalaxy, GiSpinningBlades } from 'react-icons/gi'
 import { FiMenu, FiX } from 'react-icons/fi'
 
 const navItems = [
-  { id: 'inicio', label: 'inicio', path: '/' },
-  { id: 'proyectos', label: 'proyectos', path: '/projects' },
-  { id: 'sobre-mi', label: 'sobre mí', path: '/about' },
-  { id: 'contacto', label: 'contacto', path: '/contact' },
+  { id: 'inicio', label: 'inicio' },
+  { id: 'proyectos', label: 'proyectos' },
+  { id: 'sobre-mi', label: 'sobre mí' },
+  { id: 'contacto', label: 'contacto' },
 ]
 
 const Header = () => {
@@ -20,41 +20,33 @@ const Header = () => {
   const isLandingPage = location.pathname === '/'
   const isGalaxyPage = location.pathname === '/galaxias'
 
-  const handleNavClick = (item) => {
+  const scrollToSection = (sectionId) => {
     setIsMobileMenuOpen(false)
-    if (item.path === '/') {
-      // On home page - scroll to section if exists
-      if (isLandingPage) {
-        const element = document.getElementById(item.id)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-          setActiveSection(item.id)
-        }
-      } else {
-        navigate('/')
-        setTimeout(() => {
-          const element = document.getElementById(item.id)
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
-            setActiveSection(item.id)
-          }
-        }, 100)
+    if (isLandingPage) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+        setActiveSection(sectionId)
       }
     } else {
-      // Navigate to route
-      navigate(item.path)
-      setActiveSection(item.id)
+      navigate('/')
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+          setActiveSection(sectionId)
+        }
+      }, 200)
     }
   }
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY
-      setIsScrolled(scrollY > 50)
+      setIsScrolled(window.scrollY > 50)
 
       if (isLandingPage) {
         const sections = ['inicio', 'proyectos', 'sobre-mi', 'contacto']
-        const scrollPosition = scrollY + 100
+        const scrollPosition = window.scrollY + 100
 
         for (const section of sections) {
           const element = document.getElementById(section)
@@ -101,7 +93,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => handleNavClick(item)}
+                onClick={() => scrollToSection(item.id)}
                 className={`rounded-full text-sm capitalize transition-all ${
                   isScrolled ? 'px-3 py-1.5' : 'px-4 py-2'
                 } ${
@@ -161,7 +153,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => handleNavClick(item)}
+                onClick={() => scrollToSection(item.id)}
                 className={`w-full text-left rounded-lg px-4 py-3 text-sm capitalize transition-all ${
                   activeSection === item.id
                     ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
