@@ -21,7 +21,7 @@ const Proyects = () => {
       description: "Librería lightweight que convierte tu esquema de base de datos SQL en una base de datos vectorial, permitiendo a LLMs usar contexto real de tablas y columnas para generar SQL más preciso desde lenguaje natural. Soporta PostgreSQL, MySQL, SQL Server y SQLite, con embeddings locales o Gemini.",
       img: ImgNaturalSQL,
       githubUrl: "https://github.com/Zay-M3/NaturalSQL",
-      demoUrl: "https://pypi.org/project/naturalsql/",
+      demoUrl: "https://naturalsql.online",
       importance: "📚 Librería open source publicada en PyPI con más de 1K descargas",
       process: [
         "Diseño de arquitectura modular para múltiples motores SQL",
