@@ -1,14 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { AppLayout } from '@layout/AppLayout'
-
-// Pages will be renamed in block 7
-// For now importing with existing names
-import { HomePage } from '@pages/Home'
-import { ProjectsPage } from '@pages/Proyects'
-import { AboutPage } from '@pages/AboutMe'
-import { ContactPage } from '@pages/ContacMe'
-import { GalaxyPage } from '@pages/Galaxy'
-import { NotFoundPage } from '@pages/NotFound'
+import { HomePage, ProjectsPage, AboutPage, ContactPage, GalaxyPage, NotFoundPage } from '@pages/index'
 
 export const router = createBrowserRouter([
   {

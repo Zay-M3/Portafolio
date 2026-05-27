@@ -1,7 +1,7 @@
-// Page exports - will be renamed in block 7
-export { default as HomePage } from './Home.jsx'
-export { default as ProjectsPage } from './Proyects.jsx'
-export { default as AboutPage } from './AboutMe.jsx'
-export { default as ContactPage } from './ContacMe.jsx'
-export { default as GalaxyPage } from './Galaxy.jsx'
-export { default as NotFoundPage } from './NotFound.jsx'
+// Page exports
+export { default as HomePage } from './HomePage'
+export { default as ProjectsPage } from './ProjectsPage'
+export { default as AboutPage } from './AboutPage'
+export { default as ContactPage } from './ContactPage'
+export { default as GalaxyPage } from './GalaxyPage'
+export { default as NotFoundPage } from './NotFoundPage'
