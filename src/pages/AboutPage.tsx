@@ -80,9 +80,9 @@ const AboutMe = () => {
           </h3>
           <div className="space-y-4 mb-8">
             <TimelineItem
-              title="Tecnologia en Desarollo en Software"
+              title="Tecnólogo en Desarrollo de Software"
               subtitle="Universidad Del Valle"
-              year="2022-2025"
+              year="2022-2026 (Graduado)"
             />
           </div>
 
