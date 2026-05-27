@@ -26,6 +26,7 @@ const AboutMe = () => {
       description: "Desarrollo y despliegue de sitio web profesional para empresa de soldadura y estructuras metálicas, utilizada por cliente real en producción. Implementación de landing page con secciones de servicios, portafolio de trabajos realizados, formulario de contacto e información de ubicación. Diseño responsive optimizado para visualización en dispositivos de escritorio y móviles en entorno industrial. Producción: www.estructurassoldadas.es"
     }
   ];
+
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       <Stars numStars={400} starColor="rgba(200, 200, 255," maxRadius={4} />
