@@ -1,10 +1,10 @@
 import React from "react";
 import { FaEnvelope, FaRocket } from "react-icons/fa";
-import Stars from "../componets/Stars";
+import { Stars } from "@components/ui/Stars";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import useLoadingStore from "../stores/use_loading_store";
-import Loader from "../componets/Loader";
+import { useLoadingStore } from "@storage/useLoadingStore";
+import { Loader } from "@components/ui/Loader";
 
 const ContacMe = () => {
   
