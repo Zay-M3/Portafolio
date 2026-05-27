@@ -9,7 +9,8 @@ import ImgMMaintenance from "@assets/mmaintenance.png"; // Asegúrate de que la 
 import { SiMongodb, SiGunicorn, SiFirebase  } from "react-icons/si";
 import { DiNginx } from "react-icons/di";
 import ImgTuRifa from "@assets/turifa.png";
-import ImgNaturalSQL from "@assets/naturalsql_logo.png"; // Asegúrate de que la ruta sea correcta
+import ImgNaturalSQL from "@assets/naturalsql_logo.png";
+import ImgNoLimitAI from "@assets/nolimitai_logo.png"; // Asegúrate de que la ruta sea correcta
 
 const Proyects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
@@ -56,7 +57,47 @@ const Proyects = () => {
         { name: "SQLite", icon: <span className="text-gray-400">◈</span>, category: "Database" }
       ]
     },
-    
+    {
+      title: "NoLimitAI",
+      subtitle: "Router de LLMs con Balanceo de Carga y Failover",
+      description: "Librería Python diseñada para enrutar solicitudes LLM entre múltiples proveedores (Groq, OpenRouter, Together AI, Gemini, Mistral) con balanceo round-robin automático y failover. Simplifica la gestión de múltiples servicios de IA a través de una API asíncrona unificada.",
+      img: ImgNoLimitAI,
+      githubUrl: "https://github.com/Zay-M3/NoLimitAI",
+      demoUrl: "https://pypi.org/project/nolimit-ai/",
+      importance: "🚀 Librería published en PyPI con versión TypeScript también en NPM",
+      process: [
+        "Diseño de arquitectura para routing flexible de LLMs",
+        "Implementación de balanceo round-robin entre proveedores",
+        "Sistema de failover automático cuando un proveedor falla",
+        "API asíncrona unificada para todos los proveedores",
+        "Soporte para Groq, OpenRouter, Together AI, Gemini y Mistral"
+      ],
+      learned: [
+        "Diseño de patterns de retry y failover",
+        "Manejo de múltiples APIs asíncronas",
+        "Arquitectura de bibliotecas Python publicables",
+        "Load balancing entre servicios externos",
+        "TypeScript bindings para librerías Python"
+      ],
+      achieved: [
+        "PyPI package con +500 descargas",
+        "NPM package (TypeScript) disponible",
+        "Soporte para 5 proveedores de LLM",
+        "API simple y documentada con ejemplos"
+      ],
+      solved: [
+        "Limitaciones de rate limits en proveedores únicos",
+        "Necesidad de fallback cuando un proveedor falla",
+        "Complejidad de gestionar múltiples APIs de LLM"
+      ],
+      technologies: [
+        { name: "Python", icon: <FaPython className="text-blue-500" />, category: "Language" },
+        { name: "Groq", icon: <span className="text-orange-400">◆</span>, category: "Provider" },
+        { name: "Gemini", icon: <span className="text-green-400">◆</span>, category: "Provider" },
+        { name: "Mistral", icon: <span className="text-pink-400">◆</span>, category: "Provider" },
+        { name: "TypeScript", icon: <FaJs className="text-blue-400" />, category: "Language" }
+      ]
+    },
     {
       title: "MMaintenance",
       subtitle: "Sistema Gestión de Mantenimiento",
