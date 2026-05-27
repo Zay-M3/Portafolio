@@ -10,7 +10,8 @@ import { SiMongodb, SiGunicorn, SiFirebase  } from "react-icons/si";
 import { DiNginx } from "react-icons/di";
 import ImgTuRifa from "@assets/turifa.png";
 import ImgNaturalSQL from "@assets/naturalsql_logo.png";
-import ImgNoLimitAI from "@assets/nolimitai_logo.png"; // Asegúrate de que la ruta sea correcta
+import ImgNoLimitAI from "@assets/nolimitai_logo.png";
+import ImgEstructurasSoldadas from "@assets/estructuras_soldadas.png"; // Asegúrate de que la ruta sea correcta
 
 const Proyects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
@@ -156,6 +157,45 @@ const Proyects = () => {
         { name: "Gunicorn", icon: <SiGunicorn className="text-green-500" />, category: "Server" },
         { name: "Nginx", icon: <DiNginx className="text-gray-500" />, category: "Server" },
         { name: "Ubuntu", icon: <FaUbuntu className="text-orange-500" />, category: "OS" }
+      ]
+    },
+    {
+      title: "Estructuras Soldadas",
+      subtitle: "Sitio Web para Empresa de Soldadura Industrial",
+      description: "Sitio web profesional para empresa de soldadura y estructuras metálicas. Presentación de servicios industriales, portafolio de trabajos realizados, información de contacto y ubicación. Proyecto real para cliente en producción.",
+      img: ImgEstructurasSoldadas,
+      githubUrl: "https://github.com/Zay-M3/estructuras-soldadas",
+      demoUrl: "https://www.estructurassoldadas.es",
+      importance: "🏭 Proyecto real para cliente empresarial en producción",
+      process: [
+        "Briefing con cliente para definir servicios y necesidades",
+        "Diseño de interfaz industrial profesional (design system inspirado)",
+        "Desarrollo de landing page con secciones de servicios",
+        "Galería de trabajos realizados",
+        "Formulario de contacto e información de ubicación"
+      ],
+      learned: [
+        "Diseño web para sector industrial/manufactura",
+        "Comunicación efectiva con clientes empresariales",
+        "Diseño responsive para equipos en planta",
+        "Gestión de proyectos reales con feedback de cliente"
+      ],
+      achieved: [
+        "Sitio en producción para cliente real",
+        "Diseño profesional alineado con imagen de empresa",
+        "Formulario de contacto funcional",
+        "Responsive para tablets y móviles en planta"
+      ],
+      solved: [
+        "Presencia digital para empresa de soldadura",
+        "Visualización de trabajos realizados",
+        "Contacto fácil para nuevos clientes"
+      ],
+      technologies: [
+        { name: "React", icon: <FaReact className="text-blue-400" />, category: "Frontend" },
+        { name: "TypeScript", icon: <FaJs className="text-blue-400" />, category: "Language" },
+        { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-500" />, category: "Styling" },
+        { name: "Vite", icon: <SiVite className="text-purple-500" />, category: "Build" }
       ]
     },
     {
