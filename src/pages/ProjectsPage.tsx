@@ -4,7 +4,6 @@ import { FaGithub, FaExternalLinkAlt, FaPython, FaJs, FaReact, FaHtml5, FaCss3Al
 import { SiDjango, SiTailwindcss, SiNextdotjs, SiGraphql, SiPostgresql, SiVite } from "react-icons/si";
 import { Stars } from "@components/ui/Stars";
 import ImgProyectPulmones from "@assets/pulmones_proyect.png";
-import ImgFF from "@assets/ffinance.webp";
 import ImgPortafolio from "@assets/portafolio.png";
 import ImgMMaintenance from "@assets/mmaintenance.png"; // Asegúrate de que la ruta sea correcta
 import { SiMongodb, SiGunicorn, SiFirebase  } from "react-icons/si";
@@ -73,48 +72,6 @@ const Proyects = () => {
         { name: "Gunicorn", icon: <SiGunicorn className="text-green-500" />, category: "Server" },
         { name: "Nginx", icon: <DiNginx className="text-gray-500" />, category: "Server" },
         { name: "Ubuntu", icon: <FaUbuntu className="text-orange-500" />, category: "OS" }
-      ]
-    },
-    {
-      title: "FFinance",
-      subtitle: "Plataforma de Herramientas Financieras",
-      description: "Una plataforma web completa diseñada para democratizar el acceso a herramientas financieras para nuevos inversores en el mercado de valores estadounidense. Este es un proyecto personal que busca facilitar el análisis y la toma de decisiones financieras mediante visualizaciones interactivas y datos en tiempo real, usando la API de Yfinance para obtener información actualizada.",
-      img: ImgFF,
-      githubUrl: "https://github.com/Zay-M3/FFinance",
-      demoUrl: "https://ffinance-production.up.railway.app/",
-      importance: "🏆 Proyecto destacado por su impacto social y complejidad técnica",
-      process: [
-        "Investigación del mercado financiero y necesidades de usuarios novatos",
-        "Diseño de arquitectura escalable con Django",
-        "Implementación de APIs (Yfinance) para datos financieros en tiempo real",
-        "Desarrollo de dashboards interactivos con ECharts",
-        "Testing exhaustivo y optimización de rendimiento"
-      ],
-      learned: [
-        "Integración de APIs financieras gratis de Yfinance",
-        "Manejo de grandes volúmenes de datos en tiempo real",
-        "Arquitectura de software escalable",
-        "Seguridad en aplicaciones financieras",
-        "UX/UI para datos complejos"
-      ],
-      achieved: [
-        "Plataforma funcional con usuarios reales",
-        "Reducción del 80% en tiempo de análisis financiero",
-        "Interfaz intuitiva para usuarios sin experiencia",
-        "Sistema de alertas automáticas",
-      ],
-      solved: [
-        "Barrera de entrada al mercado financiero",
-        "Complejidad de herramientas existentes",
-        "Falta de educación financiera accesible",
-        "Costos elevados de plataformas profesionales"
-      ],
-      technologies: [
-        { name: "Django", icon: <SiDjango className="text-green-600" />, category: "Backend" },
-        { name: "Python", icon: <FaPython className="text-blue-500" />, category: "Language" },
-        { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, category: "Frontend" },
-        { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, category: "Markup" },
-        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Styling" }
       ]
     },
     {
