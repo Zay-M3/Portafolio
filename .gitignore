@@ -24,3 +24,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Migration plan (local reference)
+MIGRATION_PLAN.md
