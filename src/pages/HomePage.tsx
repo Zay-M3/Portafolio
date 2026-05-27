@@ -52,11 +52,10 @@ const HomePage = () => {
           </div>
 
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            Hola! soy David Estrada
+            Hola! soy Oscar David Estrada
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Desarrollador Junior FullStack con pasión por la tecnologia, con un
-            enfoque en resolver problemas y crear experiencias únicas en la web.
+            Desarrollador Full Stack con experiencia en Python, FastAPI, Django, React y TypeScript. Apasionado por construir soluciones que impacten operativos reales — desde CRMs empresariales hasta plataformas de mantenimiento industrial. Graduado como Tecnólogo en Desarrollo de Software por la Universidad del Valle.
           </p>
 
           <div className="flex justify-center space-x-4 mb-8">
