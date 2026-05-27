@@ -8,12 +8,55 @@ import ImgPortafolio from "@assets/portafolio.png";
 import ImgMMaintenance from "@assets/mmaintenance.png"; // Asegúrate de que la ruta sea correcta
 import { SiMongodb, SiGunicorn, SiFirebase  } from "react-icons/si";
 import { DiNginx } from "react-icons/di";
-import ImgTuRifa from "@assets/turifa.png"; // Asegúrate de que la ruta sea correcta
+import ImgTuRifa from "@assets/turifa.png";
+import ImgNaturalSQL from "@assets/naturalsql_logo.png"; // Asegúrate de que la ruta sea correcta
 
 const Proyects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
 
   const projects = [
+    {
+      title: "NaturalSQL",
+      subtitle: "RAG Pipeline para Consultas SQL en Lenguaje Natural",
+      description: "Librería lightweight que convierte tu esquema de base de datos SQL en una base de datos vectorial, permitiendo a LLMs usar contexto real de tablas y columnas para generar SQL más preciso desde lenguaje natural. Soporta PostgreSQL, MySQL, SQL Server y SQLite, con embeddings locales o Gemini.",
+      img: ImgNaturalSQL,
+      githubUrl: "https://github.com/Zay-M3/NaturalSQL",
+      demoUrl: "https://naturalsql.online",
+      importance: "📚 Librería open source publicada en PyPI con más de 1K descargas",
+      process: [
+        "Diseño de arquitectura modular para múltiples motores SQL",
+        "Implementación de vectorización de esquemas con Chroma y SQLite",
+        "Integración de proveedores de embeddings (locales y Gemini)",
+        "Sistema de cache para optimizar tiempos de respuesta",
+        "Documentación completa en español e inglés"
+      ],
+      learned: [
+        "Diseño de APIs minimalistas y bien documentadas",
+        "Manejo de conexiones a múltiples motores SQL",
+        "Implementación de patterns de caching y optimización",
+        "Publicación y mantenimiento de paquetes en PyPI",
+        "Embedding de esquemas relacionales para RAG"
+      ],
+      achieved: [
+        "+1K descargas en PyPI",
+        "Soporte para PostgreSQL, MySQL, SQL Server y SQLite",
+        "Integración con Chroma y SQLite como backends vectoriales",
+        "API intuitiva con ejemplos E2E claros"
+      ],
+      solved: [
+        "Contexto limitado de LLMs con esquemas SQL",
+        "Necesidad de frameworks ligeros sin dependencias pesadas",
+        "Generación de SQL imprecisa sin contexto de tablas reales"
+      ],
+      technologies: [
+        { name: "Python", icon: <FaPython className="text-blue-500" />, category: "Language" },
+        { name: "Chroma", icon: <span className="text-purple-400">◉</span>, category: "VectorDB" },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" />, category: "Database" },
+        { name: "Gemini", icon: <span className="text-green-400">◆</span>, category: "Embeddings" },
+        { name: "SQLite", icon: <span className="text-gray-400">◈</span>, category: "Database" }
+      ]
+    },
+    
     {
       title: "MMaintenance",
       subtitle: "Sistema Gestión de Mantenimiento",
