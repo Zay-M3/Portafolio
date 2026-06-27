@@ -88,7 +88,7 @@ const HomePage = () => {
           <div className="flex justify-center items-center space-x-4 mb-8">
             <a
               href="/assets/hoja-de-vida.pdf"
-              download="Hoja de vida - Oscar David Estrada.pdf"
+              download="CV Oscar Estrada.pdf"
               className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all flex items-center space-x-2"
             >
               <span>Descargar HV</span>
