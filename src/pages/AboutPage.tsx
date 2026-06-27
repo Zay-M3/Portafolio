@@ -17,7 +17,7 @@ const AboutMe = () => {
     },
     {
       title: "Desarrollador Full Stack / DevOps – Celco S.A.S",
-      period: "Ene 2024 – Abr 2026",
+      period: "Ene 2025 – Ago 2025",
       description: "Diseño y despliegue de \"MMaintenance\", plataforma web (Django, PostgreSQL) para la digitalización del mantenimiento en la industria metalmecánica, logrando reducir en un 80% el tiempo de documentación manual. Desarrollo de aplicación móvil para técnicos de campo con React Native y Expo, integrando formularios dinámicos y firmas digitales para la generación automatizada de reportes PDF. Implementación de arquitectura de sincronización offline en la app móvil, garantizando la captura de datos en zonas rurales sin conectividad y su posterior sincronización automática al recuperar la red."
     },
     {
